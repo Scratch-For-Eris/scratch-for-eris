@@ -121,12 +121,13 @@ Vue.mixin({
             return `
                 (async()=>{
                 const Discord = require("discord.js");
+                const Eris = require(\`eris\`);
                 const Database = require("easy-json-database");
                 const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
                 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
                 const s4d = {
                     Discord,
-                    database: new Database(\`\${devMode ? S4D_NATIVE_GET_PATH : "."}/db.json\`),
+                    database: new Database(\`\${__dirname}/database.json\`),
                     joiningMember:null,
                     reply:null,
                     tokenInvalid:false,
@@ -136,10 +137,6 @@ Vue.mixin({
                         if (!s4d.client.readyTimestamp) throw new Error('You cannot perform message operations while the bot is not connected to the Discord API')
                     }
                 };
-                s4d.client = new s4d.Discord.Client({
-                    intents: [Object.values(s4d.Discord.Intents.FLAGS).reduce((acc, p) => acc | p, 0)],
-                    partials: ["REACTION"]
-                });
 
                 ${Blockly.JavaScript.workspaceToCode(this.$store.state.workspace)}
 

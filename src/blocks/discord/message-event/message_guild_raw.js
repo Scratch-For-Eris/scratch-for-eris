@@ -36,10 +36,10 @@ Blockly.Blocks[blockName] = {
 Blockly.JavaScript[blockName] = function(block) {
     const searchType = block.getFieldValue("SEARCH_TYPE");
     if(searchType === "ID"){
-        const code = ["(s4dmessage.guild || {}).id", Blockly.JavaScript.ORDER_NONE];
+        const code = ["(s4dmessage.channel.guild).id", Blockly.JavaScript.ORDER_NONE];
         return code;
     } else if(searchType === "NAME"){
-        const code = ["(s4dmessage.guild || {}).name", Blockly.JavaScript.ORDER_NONE];
+        const code = ["(s4dmessage.channel.guild).name", Blockly.JavaScript.ORDER_NONE];
         return code;
     }
 };

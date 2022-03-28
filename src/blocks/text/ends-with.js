@@ -1,9 +1,9 @@
 import Blockly from "blockly/core";
 
-const blockName = "s4d_starts_with";
+const blockName = "s4d_ends_with";
 
 const blockData = {
-    "message0": "%{BKY_STARTS_WITH}",
+    "message0": "%{BKY_ENDS_WITH}",
     "args0": [
         {
             "type": "input_value",
@@ -31,6 +31,6 @@ Blockly.Blocks[blockName] = {
 Blockly.JavaScript[blockName] = function(block) {
     const string = Blockly.JavaScript.valueToCode(block, "STRING", Blockly.JavaScript.ORDER_ATOMIC);
     const substring = Blockly.JavaScript.valueToCode(block, "SUBSTRING", Blockly.JavaScript.ORDER_ATOMIC);
-    const code = [ `(${string}).startsWith(${substring})`, Blockly.JavaScript.ORDER_NONE ];
+    const code = [ `(${string}).endsWith(${substring})`, Blockly.JavaScript.ORDER_NONE ];
     return code;
 };

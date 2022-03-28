@@ -103,6 +103,7 @@
   "RES_SEND_MEMBER_MISSING_MEMBER": "You must specify a valid member to send the message to!",
   "MANDATORY_BLOCKS": "Mandatory blocks",
   "STARTS_WITH": "%1 starts with %2",
+  "ENDS_WITH": "%1 ends with $2",
   "REPLACE": "in text %1 replace %2 with %3",
   "RES_REPLACE_STRING": "You must specify a text to replace!",
   "RES_REPLACE_REPLACE": "You must specify what to replace in the text!",

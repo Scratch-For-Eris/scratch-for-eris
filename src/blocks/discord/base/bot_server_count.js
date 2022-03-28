@@ -17,6 +17,6 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function() {
-    const code = ["s4d.client.guilds.cache.size", Blockly.JavaScript.ORDER_NONE];
+    const code = ["s4d.client.guilds.size", Blockly.JavaScript.ORDER_NONE];
     return code;
 };

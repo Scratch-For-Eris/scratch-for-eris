@@ -28,7 +28,7 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     return `
-        while(s4d.client && s4d.client.token) {
+        while(s4d.client.user) {
             await delay(50);
             ${Blockly.JavaScript.statementToCode(block, 'STATEMENT')}
             console.log('ran')

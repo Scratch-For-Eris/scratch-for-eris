@@ -1,6 +1,6 @@
 {
-  "name": "scratch-for-discord",
-  "version": "1.13.0",
+  "name": "scratch-for-eris",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "audit": "npm audit fix",

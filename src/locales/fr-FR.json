@@ -107,6 +107,7 @@
   "RES_SEND_MEMBER_MISSING_MEMBER": "Vous devez préciser un membre valide à qui envoyer le message !",
   "MANDATORY_BLOCKS": "Blocks obligatoires",
   "STARTS_WITH": "%1 commence par %2",
+  "ENDS_WITH": "%1 ends par $2",
   "REPLACE": "dans le texte %1 remplacer %2 par %3",
   "RES_REPLACE_STRING": "Vous devez préciser un texte à modifier !",
   "RES_REPLACE_REPLACE": "Vous devez préciser ce qu'il faut remplacer dans le texte !",

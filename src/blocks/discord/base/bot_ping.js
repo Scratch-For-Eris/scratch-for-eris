@@ -3,7 +3,7 @@ import * as Blockly from "blockly/core";
 const blockName = "s4d_bot_ping";
 
 const blockData = {
-    "message0": "%{BKY_BOT_PING}",
+    "message0": "Uptime of bot",
     "colour": "#5b67a5",
     "tooltip": "",
     "output": "Number",
@@ -17,6 +17,6 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function() {
-    const code = ["s4d.client.ws.ping", Blockly.JavaScript.ORDER_NONE];
+    const code = ["s4d.client.uptime", Blockly.JavaScript.ORDER_NONE];
     return code;
 };

@@ -28,6 +28,10 @@ const blockData = {
                 [
                     "%{BKY_DAY_OF_WEEK}",
                     "DAY_OF_WEEK"
+                ],
+                [
+                    "YEAR",
+                    "YEAR"
                 ]
             ]
         }
@@ -56,5 +60,7 @@ Blockly.JavaScript[blockName] = function(block) {
         return ["(new Date().getDate())", Blockly.JavaScript.ORDER_NONE];
     } else if(dataType === "DAY_OF_WEEK"){
         return ["(new Date().getDay())", Blockly.JavaScript.ORDER_NONE];
+    } else if (dataType == "YEAR") {
+        return ["(new Date().getYear())", Blockly.JavaScript.ORDER_NONE];
     }
 };

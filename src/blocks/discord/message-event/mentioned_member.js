@@ -4,7 +4,14 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_mentioned_member";
 
 const blockData = {
-    "message0": "%{BKY_MENTIONED_MEMBER}",
+    "message0": "Mentioned Member, No. (%1 or 1st)",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "no",
+            "check": ["String", "Number"]
+        }
+    ],
     "colour": "#187795",
     "tooltip": "",
     "output": "Member",
@@ -17,8 +24,8 @@ Blockly.Blocks[blockName] = {
     }
 };
 
-Blockly.JavaScript[blockName] = function() {
-    const code = [`s4dmessage.mentions.members.first()`, Blockly.JavaScript.ORDER_NONE];
+Blockly.JavaScript[blockName] = function(block) {
+    const code = [`s4dmessage.mentions.members.first(Number(${Blockly.JavaScript.valueToCode(block, "no", Blockly.JavaScript.ORDER_NONE) || ""}))`, Blockly.JavaScript.ORDER_NONE];
     return code;
 };
 
